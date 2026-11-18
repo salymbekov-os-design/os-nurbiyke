@@ -1,0 +1,94 @@
+
+PRACTICAL WORK 11
+VARIANT C: REAL MEMORY EXPERIMENTS
+
+========================================
+1. ROW-WISE ACCESS
+========================================
+
+Matrix: 2048 x 2048
+Memory: 16 MB
+
+Minor faults: 4098
+Major faults: 0
+Execution time: 0.056812 seconds
+
+========================================
+2. COLUMN-WISE ACCESS
+========================================
+
+Matrix: 2048 x 2048
+Memory: 16 MB
+
+Minor faults: 4098
+Major faults: 0
+Execution time: 0.155817 seconds
+
+Column-wise access was approximately 2.74 times slower.
+
+========================================
+3. LARGER MATRIX
+========================================
+
+Matrix: 4096 x 4096
+Memory: 64 MB
+
+Minor faults: 16386
+Major faults: 0
+Execution time: 0.229738 seconds
+
+========================================
+4. MEMORY LIMITATION
+========================================
+
+Virtual memory limit: 96 MB
+
+Result: Allocation successful.
+
+Virtual memory limit: 32 MB
+
+Result: Memory allocation failed.
+
+Error: Cannot allocate memory.
+
+========================================
+5. PAGE FAULT MEASUREMENTS
+========================================
+
+getrusage() was used to measure:
+- Minor page faults
+- Major page faults
+
+/proc/self/stat was used to read
+process memory statistics.
+
+Major page faults: 0 in all completed
+experiments.
+
+========================================
+6. LINUX ENVIRONMENT
+========================================
+
+Kernel:
+6.18.33.2-microsoft-standard-WSL2
+
+MGLRU sysfs interface:
+Not available at the checked path.
+
+========================================
+7. CONCLUSION
+========================================
+
+Row-wise access was faster than
+column-wise access.
+
+The difference is explained by
+memory layout and CPU cache locality.
+
+The ulimit experiment demonstrated
+virtual memory allocation limits.
+
+Thrashing was not reproduced.
+Major page faults remained zero.
+
+The experiments were performed in WSL2.

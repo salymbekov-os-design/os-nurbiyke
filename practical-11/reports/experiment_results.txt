@@ -1,0 +1,42 @@
+PRACTICAL WORK 11
+PAGE REPLACEMENT ALGORITHMS
+
+VARIANT A
+
+Frames: 3
+FIFO: 15
+LRU: 12
+Optimal: 9
+Clock: 14
+
+Frames: 4
+FIFO: 10
+LRU: 8
+Optimal: 8
+Clock: 9
+
+VARIANT B: GRAPH DATA
+FIFO: [20, 15, 15, 10, 9, 6, 6, 6]
+LRU: [20, 17, 12, 8, 7, 6, 6, 6]
+Optimal: [20, 13, 9, 8, 7, 6, 6, 6]
+Clock: [20, 15, 14, 9, 9, 6, 6, 6]
+
+BELADY'S ANOMALY
+FIFO: 3 frames=9, 4 frames=10
+LRU: 3 frames=10, 4 frames=8
+Optimal: 3 frames=7, 4 frames=6
+Clock: 3 frames=9, 4 frames=10
+
+LOCALITY VS RANDOM
+
+Locality
+FIFO: 438
+LRU: 398
+Optimal: 233
+Clock: 420
+
+Random
+FIFO: 761
+LRU: 763
+Optimal: 486
+Clock: 767
